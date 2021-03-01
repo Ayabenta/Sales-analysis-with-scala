@@ -29,7 +29,7 @@ import org.apache.spark.sql.types._
       ProductsData.show()
       // val df = spark.createDataFrame(
       //   spark.sparkContext.parallelize(simpleData),DataStruct)
-      var Productgrouped =SalesData.groupBy("prodID").sum("amount","quantity").show()
+      var Productgrouped =SalesData.groupBy("prodID", "name").sum("amount","quantity").show()
 
 
 
